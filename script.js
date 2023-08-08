@@ -1,5 +1,4 @@
 $(".upImg").click(function () {
-
     $('img').attr('src', $('#imgI').val())
 });
 
@@ -11,57 +10,63 @@ $('#txt').css("display", "none");
 function ChangeGrayScale() {
     Image = document.getElementById("img");
     grayScale = document.getElementById("grayScale").value;
-
     Image.style.WebkitFilter = "grayscale(" + grayScale + "%)"
 }
+
 function ChangeBlur() {
     Image = document.getElementById("img");
     blur = document.getElementById("blur").value;
-
     Image.style.WebkitFilter = "blur(" + blur + "px)"
 }
+
 function ChangeBrightness() {
     Image = document.getElementById("img");
     brightness = document.getElementById("brightness").value;
-
     Image.style.WebkitFilter = "brightness(" + brightness + "%)"
 }
+
 function ChangeContrast() {
     Image = document.getElementById("img");
     contrast = document.getElementById("contrast").value;
-
     Image.style.WebkitFilter = "contrast(" + contrast + "%)"
 }
+
 function ChangeDropShadow() {
     Image = document.getElementById("img");
     dropShadow = document.getElementById("dropShadow").value;
-
     Image.style.WebkitFilter = "dropShadow(" + dropShadow + "%)"
 }
+
 function ChangeInvert() {
     Image = document.getElementById("img");
     invert = document.getElementById("invert").value;
     Image.style.WebkitFilter = "invert(" + invert + "%)"
 }
+
 function ChangeOpacity() {
     Image = document.getElementById("img");
     opacity = document.getElementById("opacity").value;
     Image.style.WebkitFilter = "opacity(" + opacity + "%)"
 }
+
 function ChangeSaturation() {
     Image = document.getElementById("img");
     saturate = document.getElementById("saturate").value;
     Image.style.WebkitFilter = "saturate(" + saturate + "%)"
-} function ChangeSepia() {
+}
+
+ function ChangeSepia() {
     Image = document.getElementById("img");
     sepia = document.getElementById("sepia").value;
     Image.style.WebkitFilter = "sepia(" + sepia + "%)"
 }
+
 function ChangeHueRotate() {
     Image = document.getElementById("img");
     hue_rotate = document.getElementById("hue_rotate").value;
     Image.style.WebkitFilter = "hue-rotate(" + hue_rotate + "deg)"
 }
+
 $('#rotate90').click(function () {
     document.querySelector("#img").style.transform = "rotate(90deg)";
 });
@@ -115,6 +120,7 @@ $('#rotateMouse').click(function (e) {
         }
     })
 })
+
 $('#rotateMouseD').click(function () {
     rotated = false
     document.querySelector("#img").style.transform = "rotate(" + 0 + "deg)";
@@ -187,16 +193,12 @@ $('#texte').click(function () {
 
 $('#all').css("display", "none");
 
-
-
-
 $('#first').click(function () {
     $('#all').css("display","block")
     $('#firs').css("display","none")
     var res=$('#finput').val()
     $('#fh').append('Welcome '+res)
     localStorage.setItem('name', res);
-    console.log(localStorage)
     $("#fh").delay(3000).slideUp("slow");
 })
 

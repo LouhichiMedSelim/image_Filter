@@ -1,106 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- 
+
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Filter</title>
+    <link rel="icon" type="image/x-icon" href="logo1.png">
 </head>
+
 <body>
     <div id="firs">
-<h1>Welcome to Louhichi's image filter</h1>
-<input id="finput" type="text" placeholder="please write your name ">
+        <h1>Welcome to Louhichi's image filter</h1>
+        <input id="finput" type="text" placeholder="please write your name ">
 
-<button id="first" >save your name </button>
+        <button id="first">Save your name </button>
     </div>
-    <div id ='all'>
-   <h1 id="fh" ></h1>
+    <div id='all'>
+        <h1 id="fh"></h1>
         <input id="imgI" placeholder='Please enter the url of the image' type="text" name="name">
-         <button class="upImg">Upload your image</button><br>
-         <div class="container">
-         <img id="img" src=""  width="250" height="250">
-         <p class="centered"></p>
-         <p class="bottom-left"></p>
-         <p class="top-left"></p>
-         <p class="top-right"></p>
-         <p class="bottom-right"></p>
-         <br>
+        <button class="upImg">Upload your image</button><br>
+        <div class="container">
+            <img id="img" src="" width="250" height="250">
+            <p class="centered"></p>
+            <p class="bottom-left"></p>
+            <p class="top-left"></p>
+            <p class="top-right"></p>
+            <p class="bottom-right"></p>
+            <br>
         </div>
-       
-       
-   
-    <button id="fil">Filter</button>
-    <div id="filter">
-       <label>grayScale:</label>
-        <input type="range" class="slider" onchange="ChangeGrayScale()" id="grayScale" name="grayScale" min="0" max="100" />
 
-        <label>blur:</label>
-        <input type="range" class="slider" onchange="ChangeBlur()" id="blur" name="blur" min="0" max="20" /><br>
 
-        <label>brightness:</label>
-        <input type="range" class="slider" onchange="ChangeBrightness()" id="brightness" name="brightness" min="0" max="100" />
 
-        <label>contrast:</label>
-        <input type="range" class="slider" onchange="ChangeContrast()" id="contrast" name="contrast" min="0" max="100" /><br>
+        <button id="fil">Filter</button>
+        <div id="filter">
+            <label>grayScale:</label>
+            <input type="range" class="slider" onchange="ChangeGrayScale()" id="grayScale" name="grayScale" min="0"
+                max="100" />
 
-        <label>dropShadow:</label>
-        <input type="range" class="slider" onchange="ChangeDropShadow()" id="dropShadow" name="dropShadow" min="0" max="100" />
+            <label>blur:</label>
+            <input type="range" class="slider" onchange="ChangeBlur()" id="blur" name="blur" min="0" max="20" /><br>
 
-        <label>invert:</label>
-        <input type="range" class="slider" onchange="ChangeInvert()" id="invert" name="invert" min="0" max="100" /><br>
+            <label>brightness:</label>
+            <input type="range" class="slider" onchange="ChangeBrightness()" id="brightness" name="brightness" min="0"
+                max="100" />
 
-        <label>opacity:</label>
-        <input type="range" class="slider" onchange="ChangeOpacity()" id="opacity" name="opacity" min="0" max="100" />
+            <label>contrast:</label>
+            <input type="range" class="slider" onchange="ChangeContrast()" id="contrast" name="contrast" min="0"
+                max="100" /><br>
 
-        <label>saturate:</label>
-        <input type="range" class="slider" onchange="ChangeSaturation()" id="saturate" name="saturate" min="0" max="100" /><br>
+            <label>dropShadow:</label>
+            <input type="range" class="slider" onchange="ChangeDropShadow()" id="dropShadow" name="dropShadow" min="0"
+                max="100" />
 
-        <label>sepia:</label>
-        <input type="range" class="slider" onchange="ChangeSepia()" id="sepia" name="sepia" min="0" max="100" />
+            <label>invert:</label>
+            <input type="range" class="slider" onchange="ChangeInvert()" id="invert" name="invert" min="0"
+                max="100" /><br>
 
-        <label>hue_rotate:</label>
-        <input type="range" class="slider" onchange="ChangeHueRotate()" id="hue_rotate" name="hue_rotate" min="0" max="360" /><br>
+            <label>opacity:</label>
+            <input type="range" class="slider" onchange="ChangeOpacity()" id="opacity" name="opacity" min="0"
+                max="100" />
+
+            <label>saturate:</label>
+            <input type="range" class="slider" onchange="ChangeSaturation()" id="saturate" name="saturate" min="0"
+                max="100" /><br>
+
+            <label>sepia:</label>
+            <input type="range" class="slider" onchange="ChangeSepia()" id="sepia" name="sepia" min="0" max="100" />
+
+            <label>hue_rotate:</label>
+            <input type="range" class="slider" onchange="ChangeHueRotate()" id="hue_rotate" name="hue_rotate" min="0"
+                max="360" /><br>
+        </div>
+        <button id="rott">rotation</button>
+        <div id="rot">
+            <button id="rotateMouse">Rotate using the mouse</button>
+            <button id="rotateMouseD">Disable rotation using the mouse</button><br>
+
+            <button id="rotate90">rotate90 </button>
+            <button id="rotate-90">rotate-90 </button><br>
+            <button id="rotate180">rotate180 </button>
+            <button id="rotate-180">rotate-180 </button><br>
+            <button id="rotate270">rotate270 </button>
+            <button id="rotate-270">rotate-270 </button><br>
+            <button id="rotate360">rotate360 </button>
+            <button id="rotate-360">rotate-360 </button><br>
+        </div>
+        <button id="hewi">Height and Width</button>
+        <div id="wh">
+            <input type="text" id='widthI' type="number" placeholder="change width of the image">
+            <button id="width">Change width</button><br>
+
+            <input type="text" id="heightI" type="number" placeholder="change height of the image">
+            <button id="height">Change height</button><br>
+        </div>
+        <button id="texte">Texte</button>
+        <div id="txt">
+            <label>create text:</label>
+            <input type="text" id="iBC" placeholder="write your text ">
+
+            <div id="tb">
+                <button id="bcentered">centered</button>
+                <button id="bbl" ">bottom Left</button>
+<button id=" btl">top left</button>
+                <button id="btr">top right</button>
+                <button id="bbr">bottom right</button>
+                <button id="tr">earase all text</button>
+
+            </div>
+        </div>
     </div>
-    <button id="rott" >rotation</button>
-    <div id="rot">
-        <button id="rotateMouse" >rotate using the mouse</button>
-        <button id="rotateMouseD"  >disable rotate using the mouse</button><br>
-
-        <button id="rotate90">rotate90 </button>
-    <button id="rotate-90">rotate-90 </button><br>
-    <button id="rotate180">rotate180 </button>
-    <button id="rotate-180">rotate-180 </button><br>
-    <button id="rotate270">rotate270 </button>
-    <button id="rotate-270">rotate-270 </button><br>
-    <button id="rotate360">rotate360 </button>
-    <button id="rotate-360">rotate-360 </button><br>
-</div>
-<button id="hewi">Height and Width</button>
-<div id="wh">
-    <input type="text" id='widthI'type="number" placeholder="change width of the image">
-    <button id="width">change width</button><br>
-
-    <input type="text" id="heightI" type="number" placeholder="change height of the image">
-    <button id="height">change height</button><br>
-</div>
-<button id="texte">Texte</button>
-    <div id="txt">
-        <label>create text:</label>
-        <input type="text" id="iBC" placeholder="write your text ">
-<div id="tb">      
-<button id="bcentered" >centered</button>
-<button id="bbl" ">bottom Left</button>
-<button id="btl" >top left</button>
-<button id="btr" >top right</button>
-<button id="bbr" >bottom right</button>
-<button id="tr">earase all text</button>
-</div>
-</div>
-</div>  
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 
 
 </body>
+
 </html>
